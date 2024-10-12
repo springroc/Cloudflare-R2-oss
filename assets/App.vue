@@ -150,7 +150,7 @@
       <ul v-if="typeof focusedItem === 'string'" class="contextmenu-list">
         <li>
           <button @click="copyLink(`/?p=${encodeURIComponent(focusedItem)}`)">
-            <span>复制链接</span>
+            <span>copy link复制链接</span>
           </button>
         </li>
         <li>
@@ -158,34 +158,34 @@
             style="color: red"
             @click="removeFile(focusedItem + '_$folder$')"
           >
-            <span>删除</span>
+            <span>delete 删除</span>
           </button>
         </li>
       </ul>
       <ul v-else class="contextmenu-list">
         <li>
           <button @click="renameFile(focusedItem.key)">
-            <span>重命名</span>
+            <span>rename 重命名</span>
           </button>
         </li>
         <li>
           <a :href="`/raw/${focusedItem.key}`" target="_blank" download>
-            <span>下载</span>
+            <span>download 下载</span>
           </a>
         </li>
         <li>
           <button @click="clipboard = focusedItem.key">
-            <span>复制</span>
+            <span>cocpy 复制</span>
           </button>
         </li>
         <li>
           <button @click="copyLink(`/raw/${focusedItem.key}`)">
-            <span>复制链接</span>
+            <span>copylink 复制链接</span>
           </button>
         </li>
         <li>
           <button style="color: red" @click="removeFile(focusedItem.key)">
-            <span>删除</span>
+            <span>delete 删除</span>
           </button>
         </li>
       </ul>
